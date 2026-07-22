@@ -3,119 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS 서비스 소개 메인 디렉토리</title>
+    <title>Nginx 웹 서버 연결 성공</title>
     <style>
-        :root {
-            --aws-squid-ink: #232f3e;
-            --aws-orange: #ff9900;
-            --aws-bg: #f2f3f3;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--aws-bg);
-            color: var(--aws-squid-ink);
-            line-height: 1.6;
-        }
-        header {
-            background-color: var(--aws-squid-ink);
-            color: white;
-            text-align: center;
-            padding: 2.5rem 1rem;
-            border-bottom: 4px solid var(--aws-orange);
-        }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { margin: 0.5rem 0 0 0; color: #a0a0a0; }
-        .container {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 1rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 2rem;
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-            border-top: 5px solid #ccc;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-        }
-        .card.rds { border-top-color: #3b7ea1; }
-        .card.lambda { border-top-color: #d16600; }
-        .card.secrets { border-top-color: #dd0000; }
-        .card h2 { margin-top: 0; color: var(--aws-squid-ink); }
-        .badge {
-            display: inline-block;
-            background: #e1e4e6;
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        .btn {
-            display: inline-block;
-            background-color: var(--aws-orange);
-            color: white;
-            text-decoration: none;
-            padding: 0.6rem 1.2rem;
-            border-radius: 4px;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: background 0.2s;
-        }
-        .btn:hover { background-color: #e08800; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f4f8; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 5px solid #0066cc; }
+        h1 { color: #0066cc; margin-bottom: 10px; }
+        p { color: #555; font-size: 1.1rem; }
+        .status { display: inline-block; background-color: #e1f5fe; color: #0288d1; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; margin-top: 15px; }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>AWS 핵심 서비스 가이드</h1>
-        <p>클라우드 인프라 구축을 위한 필수 AWS 솔루션을 소개합니다.</p>
-    </header>
-
-    <div class="container">
-        <div class="grid">
-            <!-- RDS Card -->
-            <div class="card rds" onclick="navigateTo('rds')">
-                <span class="badge" style="color: #3b7ea1;">Database</span>
-                <h2>Amazon RDS</h2>
-                <p>클라우드에서 관계형 데이터베이스를 간편하게 설정, 운영 및 확장할 수 있는 관리형 서비스입니다.</p>
-                <a href="rds" class="btn">자세히 보기</a>
-            </div>
-
-            <!-- Lambda Card -->
-            <div class="card lambda" onclick="navigateTo('lambda')">
-                <span class="badge" style="color: #d16600;">Compute</span>
-                <h2>AWS Lambda</h2>
-                <p>서버를 프로비저닝하거나 관리할 필요 없이 사용한 컴퓨팅 시간만큼만 비용을 지불하는 서버리스 서비스입니다.</p>
-                <a href="lambda" class="btn">자세히 보기</a>
-            </div>
-
-            <!-- Secrets Manager Card -->
-            <div class="card secrets" onclick="navigateTo('secret-manager')">
-                <span class="badge" style="color: #dd0000;">Security</span>
-                <h2>AWS Secrets Manager</h2>
-                <p>애플리케이션, 서비스, IT 리소스에 액세스하는 데 필요한 비밀을 안전하게 관리, 회전, 암호화합니다.</p>
-                <a href="secret-manager" class="btn">자세히 보기</a>
-            </div>
-        </div>
+    <div class="card">
+        <h1>🟢 Nginx Server Operational</h1>
+        <p>Nginx 웹 서버가 성공적으로 리스닝 중이며 연결되었습니다.</p>
+        <div class="status">Reverse Proxy / Web Server Test</div>
     </div>
-
-    <script>
-        function navigateTo(url) {
-            window.location.href = url;
-        }
-    </script>
 </body>
 </html>
